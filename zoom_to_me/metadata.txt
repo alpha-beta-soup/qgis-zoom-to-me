@@ -12,7 +12,6 @@ category=Plugins
 icon=icon.svg
 experimental=True
 hasProcessingProvider=no
-# TODO: set these before uploading to plugins.qgis.org
 tracker=https://github.com/alpha-beta-soup/qgis-zoom-to-me/issues
 repository=https://github.com/alpha-beta-soup/qgis-zoom-to-me
 homepage=https://github.com/alpha-beta-soup/qgis-zoom-to-me
