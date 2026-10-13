@@ -19,9 +19,12 @@ deploy:
 	rsync -a --delete --exclude '__pycache__' $(PLUGIN)/ "$(QGIS_PLUGIN_DIR)/$(PLUGIN)/"
 	@echo "Deployed to $(QGIS_PLUGIN_DIR)/$(PLUGIN)"
 
+# plugins.qgis.org requires a LICENSE file inside the plugin folder.
 zip: clean
 	mkdir -p dist
-	cd . && zip -r dist/$(PLUGIN).zip $(PLUGIN) -x '*/__pycache__/*' '*.pyc'
+	cp LICENSE $(PLUGIN)/LICENSE
+	zip -r dist/$(PLUGIN).zip $(PLUGIN) -x '*/__pycache__/*' '*.pyc'
+	rm $(PLUGIN)/LICENSE
 
 clean:
 	rm -rf dist

@@ -56,3 +56,7 @@ make test-qgis
 ```sh
 make zip           # writes dist/zoom_to_me.zip for plugins.qgis.org
 ```
+
+## License
+
+GPL-2.0-or-later, as required for plugins on plugins.qgis.org. See `LICENSE`.
