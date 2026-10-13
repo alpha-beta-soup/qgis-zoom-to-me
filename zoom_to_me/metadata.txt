@@ -1,0 +1,20 @@
+[general]
+name=Zoom to Me
+qgisMinimumVersion=3.22
+supportsQt6=True
+description=One button that zooms the map to where this computer appears to be.
+about=Adds a toolbar button that centres the map on your current location. If QGIS has a live GPS connection (Settings > Options > GPS, or the GPS Information panel) its latest fix is used. Otherwise the plugin asks https://ipinfo.io where your public IP address is, which is only accurate to roughly the city level and will be wrong behind a VPN or corporate gateway. Note that using the fallback sends your public IP address to ipinfo.io, a third-party service.
+version=0.1.0
+author=Richard Law
+email=richard.m.law@gmail.com
+tags=zoom,location,gps,ip,navigation
+category=Plugins
+icon=icon.svg
+experimental=True
+hasProcessingProvider=no
+# TODO: set these before uploading to plugins.qgis.org
+tracker=https://github.com/alpha-beta-soup/qgis-zoom-to-me/issues
+repository=https://github.com/alpha-beta-soup/qgis-zoom-to-me
+homepage=https://github.com/alpha-beta-soup/qgis-zoom-to-me
+changelog=0.1.0
+  - First release: GPS connection first, ipinfo.io fallback.

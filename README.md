@@ -37,10 +37,18 @@ make deploy QGIS_PLUGIN_DIR=~/.local/share/QGIS/QGIS3/profiles/work/python/plugi
 
 ## Tests
 
-The parsing and scale logic has no QGIS dependency:
+The parsing and scale logic has no QGIS dependency, so this runs anywhere:
 
 ```sh
 make test
+```
+
+The QGIS-bound tests drive the plugin against an offscreen map canvas. They
+run inside the conda environment that provides QGIS (default `~/.conda/envs/qgis-env`,
+override with `QGIS_ENV`):
+
+```sh
+make test-qgis
 ```
 
 ## Package
